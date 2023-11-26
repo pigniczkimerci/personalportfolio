@@ -5,18 +5,30 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: #1E1D1E;
+  font-family: 'Bebas Neue', sans-serif;
 }
-
 .background div::-webkit-scrollbar { 
   width: 0;
 }
 #hi{
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 58px;
   color: #36A6CB;
 }
 #iam{
-  font-family: 'Bebas Neue', sans-serif;
   color: #fff;
   font-size: 32px;
+}
+.aboutme p{
+  color: #fff;
+  font-size: 2rem;
+  padding: 0px 100px;
+}
+.skills p{
+  font-size: 58px;
+  color: #fff;
+}
+
+/*donout*/
+.donutchart-legend{
+  display: none;
 }

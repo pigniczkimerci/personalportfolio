@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import './index.css';
-
+import DonutChart from 'react-donut-chart';
 
 const ParallaxComponent = () => {
   // eslint-disable-next-line no-undef
@@ -39,7 +39,7 @@ const ParallaxComponent = () => {
       `}
       </style>
     <div ref={heroRef} className="background">
-      <Parallax pages={5}>
+      <Parallax pages={6}>
         <ParallaxLayer offset={0} speed={0.5} style={{
           display: 'flex',
           alignItems: 'center',
@@ -56,26 +56,62 @@ const ParallaxComponent = () => {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer sticky={{ start: 1, end: 3 }} style={{
+      <ParallaxLayer offset={1} speed={0.5} style={{
+          display: 'flex',
+          justifyContent: 'right',
+          pointerEvents: 'none',
+        }}>
+          <div className='aboutme'>
+            <p> My passion for computer graphics and web development began during my time in high school, so I decided to continue my studies in this field. During my studies, I have placed special emphasis on learning web technologies.</p>
+          </div>
+      </ParallaxLayer>
+      <ParallaxLayer sticky={{ start: 2, end: 4 }} style={{
           display: 'flex',
           justifyContent: 'left',
           pointerEvents: 'none',
+          paddingLeft: '200px'
         }}>
-          <div>
-            <p>I'm a sticky layer</p>
+          <div className='skills'>
+            <p>Skills:</p>
           </div>
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1.5} speed={1.5} style={{
+      </ParallaxLayer>
+      <ParallaxLayer sticky={{ start: 3, end: 4 }} style={{
           display: 'flex',
-          justifyContent: 'right',
+          justifyContent: 'left',
+          pointerEvents: 'none',
+          paddingLeft: '200px',
+          paddingTop: '100px'
+        }}>
+          {/*
+          <div className='skills'>
+            <p>HTML, CSS</p>
+          </div>
+          */}
+          <DonutChart
+          data={[
+            {
+              label: 'HTML',
+              value: 95,
+              fill: "#123456",
+            },
+            {
+              label: '',
+              value: 5,
+              isEmpty: true,
+            },
+          ]}
+        />;
+      </ParallaxLayer>
+        <ParallaxLayer offset={4} speed={1.5} style={{
+          display: 'flex',
+          justifyContent: 'center',
           pointerEvents: 'none',
         }}>
           <div>
             <p>I'm not</p>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={2.5} speed={1.5} style={{
+        <ParallaxLayer offset={5} speed={1.5} style={{
           display: 'flex',
           justifyContent: 'right',
           pointerEvents: 'none',
