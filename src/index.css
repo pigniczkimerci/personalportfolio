@@ -1,12 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 body {
   overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  background-color: #1E1D1E;
 }
+
 .background div::-webkit-scrollbar { 
   width: 0;
 }
-.background div{
- /*background-color: #483d3d;*/
+#hi{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 58px;
+  color: #36A6CB;
 }
-p{
-/*  color: #fff;*/
+#iam{
+  font-family: 'Bebas Neue', sans-serif;
+  color: #fff;
+  font-size: 32px;
 }
